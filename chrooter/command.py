@@ -17,3 +17,6 @@ class Command:
             except IndexError as exception:
                 continue
         return dependencies
+
+    def get_path(self):
+        return self.command_string

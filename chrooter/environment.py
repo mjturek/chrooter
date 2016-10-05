@@ -12,6 +12,8 @@ class Environment:
         for dep in deps:
             self.duplicate_into(dep)
 
+        self.duplicate_into(command.get_path())
+
     def duplicate_into(self, file_to_dup):
         # If dir doesn't exist in environment, create it
         dest_dir = os.path.join(self.root_path,
